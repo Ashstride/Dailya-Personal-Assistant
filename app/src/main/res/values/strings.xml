@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Dailya</string>
+    <string name="mood_happy">Happy mood</string>
+    <string name="mood_good">Good mood</string>
+    <string name="mood_neutral">Neutral mood</string>
+    <string name="mood_sad">Sad mood</string>
+    <string name="mood_miserable">Miserable mood</string>
+    <string name="mood_title">Mood</string>
+    <string name="today_tasks">Today Tasks</string>
+    <string name="view_all_tasks">View All &gt;</string>
+    <string name="health_overview">Health Overview</string>
+    <string name="water_intake">Water Intake</string>
+    <string name="water_progress">6 / 8 Glasses</string>
+    <string name="sleep_title">Sleep</string>
+    <string name="sleep_time">7 h 30 m</string>
+    <string name="greeting_text">Good morning,</string>
+    <string name="welcome_message">Let\'s make today amazing!</string>
+    <string name="task_1_title">Study Design System</string>
+    <string name="task_1_time">10:00 AM - 11:30 AM</string>
+    <string name="task_2_title">Morning Walk</string>
+    <string name="task_2_time">07:00 AM - 07:30 AM</string>
+    <string name="back">Back</string>
+    <string name="diary_reflection">Diary Reflection</string>
+    <string name="diary_entries_default">0 entries today</string>
+    <string name="diary_preview_default">Write entry...</string>
+    <string name="diary_icon">Diary icon</string>
+    <string name="diary_cutie">Diary illustration</string>
+    <string name="notification_permission_desc">Notification Permissions Picture</string>
+    <string-array name="daily_reflection_questions">
+        <item>What are you grateful for today?</item>
+        <item>What was the best moment of your day?</item>
+        <item>What challenged you today?</item>
+        <item>What did you learn today?</item>
+        <item>What is one thing you did well today?</item>
+        <item>What would you like to do differently tomorrow?</item>
+        <item>What made today meaningful?</item>
+        <item>What moment made you smile today?</item>
+        <item>What are you proud of today?</item>
+        <item>What drained your energy today?</item>
+        <item>What gave you energy today?</item>
+        <item>What is something you want to remember from today?</item>
+        <item>Who or what helped you today?</item>
+        <item>What small win did you have today?</item>
+        <item>What do you want to improve tomorrow?</item>
+        <item>What brought you peace today?</item>
+    </string-array>
+
+
+
+</resources>

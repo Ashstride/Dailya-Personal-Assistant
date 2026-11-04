@@ -1,0 +1,40 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DailyAssistant" parent="Theme.Material3.Light.NoActionBar">
+    <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="FilterChipStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">18dp</item>
+        <item name="android:paddingRight">18dp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:layout_marginEnd">10dp</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="DailyPickerDialogTheme" parent="Theme.Material3.Light.Dialog">
+        <item name="colorPrimary">@color/task_purple</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <item name="colorSecondary">@color/task_purple</item>
+        <item name="colorOnSecondary">@color/white</item>
+
+        <item name="colorSurfaceVariant">#D7D3E0</item>
+        <item name="colorOnSurfaceVariant">#4A4458</item>
+
+        <item name="android:windowBackground">@drawable/bg_picker_dialog</item>
+    </style>
+
+
+
+
+    <style name="Theme.DailyAssistant" parent="Base.Theme.DailyAssistant" />
+
+</resources>

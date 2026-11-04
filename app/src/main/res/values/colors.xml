@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="bg_white">#FDFDFD</color>
+    <color name="text_dark">#2D2D2D</color>
+    <color name="text_purple">#7A5FC1</color>
+    <color name="text_gray">#A0A0A0</color>
+    <color name="card_bg_light">#FFFFFF</color>
+    <color name="accent_blue">#E3F2FD</color>
+    <color name="accent_purple">#F3E5F5</color>
+    <color name="progress_blue">#42A5F5</color>
+    <color name="progress_purple">#9575CD</color>
+    <color name="task_purple">#8E44AD</color>
+    <color name="task_purple_light">#F3E8FA</color>
+    <!-- All (Indigo/Purple) -->
+    <color name="all_normal_bg">#EEF2FF</color>
+    <color name="all_selected_bg">#4F46E5</color>
+    <color name="all_text">#4F46E5</color>
+
+    <!-- Pending (Yellow/Orange) -->
+    <color name="pending_normal_bg">#FFFBEB</color>
+    <color name="pending_selected_bg">#F4A91D</color>
+    <color name="pending_text">#F4A91D</color>
+
+    <!-- Done (Green) -->
+    <color name="done_normal_bg">#F0FDF4</color>
+    <color name="done_selected_bg">#2BB361</color>
+    <color name="done_text">#2BB361</color>
+
+    <!-- Overdue (Red) -->
+    <color name="overdue_normal_bg">#FEF2F2</color>
+    <color name="overdue_selected_bg">#E57373</color>
+    <color name="overdue_text">#E57373</color>
+    <color name="health_bg">#121212</color>
+    <color name="health_card">#1E1E1E</color>
+    <color name="health_text_primary">#FFFFFF</color>
+    <color name="health_text_secondary">#CFCFCF</color>
+    <color name="health_blue">#7EC8FF</color>
+    <color name="health_purple">#B39DFF</color>
+    <color name="health_button">#8B74FF</color>
+
+
+
+
+</resources>

@@ -1,0 +1,72 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="70dp"
+    android:viewportWidth="240"
+    android:alpha="1"
+    android:viewportHeight="240">
+
+    <!-- لایه‌های زیرین کاغذ -->
+    <path
+        android:fillColor="#935CD6"
+        android:pathData="M56,46 L184,46 C195,46 204,55 204,66 L204,174 C204,185 195,194 184,194 L56,194 C45,194 36,185 36,174 L36,66 C36,55 45,46 56,46 Z" />
+
+    <path
+        android:fillColor="#9F7ED7"
+        android:pathData="M52,42 L196,42 C207,42 216,51 216,62 L216,170 C216,181 207,190 196,190 L52,190 C41,190 32,181 32,170 L32,62 C32,51 41,42 52,42 Z" />
+
+    <!-- جلد اصلی -->
+    <path
+        android:fillColor="#9D7DDB"
+        android:pathData="M40,38 L152,38 C163,38 172,47 172,58 L172,164 C172,175 163,184 152,184 L40,184 C29,184 20,175 20,164 L20,58 C20,47 29,38 40,38 Z" />
+
+    <!-- عطف دفترچه -->
+    <path
+        android:fillColor="#6B31AF"
+        android:pathData="M40,38 C29,38 20,47 20,58 L20,164 C20,175 29,184 40,184 L84,184 L84,38 Z" />
+
+    <!-- حلقه‌ها: circle به path تبدیل شده -->
+    <path
+        android:fillColor="#C4A8F0"
+        android:pathData="M62,67 A8,8 0 1,1 61.99,67 Z" />
+    <path
+        android:fillColor="#543483"
+        android:pathData="M62,70.5 A4.5,4.5 0 1,1 61.99,70.5 Z" />
+
+    <path
+        android:fillColor="#C4A8F0"
+        android:pathData="M62,102 A8,8 0 1,1 61.99,102 Z" />
+    <path
+        android:fillColor="#543483"
+        android:pathData="M62,105.5 A4.5,4.5 0 1,1 61.99,105.5 Z" />
+
+    <path
+        android:fillColor="#C4A8F0"
+        android:pathData="M62,137 A8,8 0 1,1 61.99,137 Z" />
+    <path
+        android:fillColor="#543483"
+        android:pathData="M62,140.5 A4.5,4.5 0 1,1 61.99,140.5 Z" />
+
+    <!-- خطوط داخلی -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,70 H146 C150,70 152,72 152,75 S150,80 146,80 H100 C96,80 94,78 94,75 S96,70 100,70 Z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,95 H128 C132,95 134,97 134,100 S132,105 128,105 H100 C96,105 94,103 94,100 S96,95 100,95 Z" />
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M100,120 H138 C142,120 144,122 144,125 S142,130 138,130 H100 C96,130 94,128 94,125 S96,120 100,120 Z" />
+
+    <!-- ستاره تزئینی -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M142,145 L145,155 L155,155 L147,161 L150,171 L142,165 L134,171 L137,161 L129,155 L139,155 Z" />
+
+    <!-- نشانه -->
+    <path
+        android:fillColor="#543483"
+        android:pathData="M138,38 L153,38 L153,78 L145,70 L138,78 Z" />
+
+</vector>

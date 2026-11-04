@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:alpha="0.7"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- ۱. اون مربع پاستلی با گوشه‌های خیلی گرد (Bubbly) -->
+    <path
+        android:fillColor="#BAE5D0"
+        android:pathData="M8,3H16C18.76,3 21,5.24 21,8V16C21,18.76 18.76,21 16,21H8C5.24,21 3,18.76 3,16V8C3,5.24 5.24,3 8,3Z" />
+
+    <!-- ۲. اون تیکِ سفیدِ وسط (دقیق و نرم) -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="2.2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:pathData="M8.5,12.5L11,15L15.5,9.5" />
+
+</vector>

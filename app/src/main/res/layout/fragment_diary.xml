@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@+id/diaryScrollView"
+ xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FDFAFF"
+    android:fillViewport="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".DiaryFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:id="@+id/diaryHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <!-- عنوان -->
+            <TextView
+                android:id="@+id/tvDiaryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="My Diary"
+                android:textColor="#1E1E1E"
+                android:textSize="30sp"
+                android:textStyle="bold" />
+
+            <!-- ایموجی دفترچه -->
+            <TextView
+                android:id="@+id/tvDiaryEmoji"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/tvDiaryTitle"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="2dp"
+                android:text="📔"
+                android:textSize="25sp" />
+
+        </RelativeLayout>
+
+        <!-- Bubble Tabs -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/layoutDiaryTabs"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="2dp"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="@android:color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="3dp">
+
+                <TextView
+                    android:id="@+id/tabMyDiary"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="My Diary"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#6C63FF"
+                    android:background="@drawable/bg_tab_unselected"
+                    android:paddingVertical="2dp"/>
+
+                <TextView
+                    android:id="@+id/tabMemories"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Memories"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#6C63FF"
+                    android:background="@drawable/bg_tab_unselected"
+                    android:paddingVertical="2dp"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Custom Search Bar -->
+        <LinearLayout
+            android:id="@+id/layoutDiarySearch"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_search_bar"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingEnd="8dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:src="@drawable/ic_search"
+                app:tint="#8A7BFF" />
+
+            <EditText
+                android:id="@+id/etDiarySearch"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Search title, content, date or mood..."
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="0dp"
+                android:singleLine="true"
+                android:textColor="#252525"
+                android:textColorHint="#9993A5"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+        <!--Memory Capsule-->
+        <LinearLayout
+            android:id="@+id/layoutMemoryCapsule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:paddingTop="32dp"
+            android:paddingBottom="32dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/ic_memory_capsule" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your memory capsule is waiting"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#2A2A2A"
+                android:gravity="center"
+                android:layout_marginTop="16dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nothing written here yet.\nCapture a small moment before it drifts away."
+                android:textSize="14sp"
+                android:textColor="#6A6A6A"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:paddingHorizontal="32dp" />
+        </LinearLayout>
+
+
+
+
+        <!-- Weekly Calendar Box -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardWeeklyCalendar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:layout_marginStart="-10dp"
+            android:layout_marginEnd="-10dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="18dp"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <!-- Top Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvMonthYear"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="July 2026"
+                        android:textColor="#2B2B2B"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:id="@+id/btnOpenCalendar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="6dp"
+                        android:background="@android:color/transparent"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@drawable/ic_calendar"
+                            app:tint="#8A7BFF" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:text="Calendar"
+                            android:textColor="#8A7BFF"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvWeekDays"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:overScrollMode="never"
+                    android:clipChildren="false"
+                    android:clipToPadding="false"
+                    tools:listitem="@layout/item_week_day" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Today's Reflection -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDiaryReflection"
+            android:transitionName="diary_editor_transition"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:cardBackgroundColor="@color/task_purple_light"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="4dp"
+            android:layout_marginTop="-16dp"
+            android:layout_marginStart="-8dp"
+            android:layout_marginEnd="-8dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="18dp"
+                android:paddingEnd="18dp"
+                android:paddingBottom="18dp"
+                android:paddingTop="10dp">
+
+                <!-- Header Row: Daily Question & Expand Button -->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="44dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/btnExpandDiary"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:clickable="true"
+                        android:contentDescription="Expand diary editor"
+                        android:focusable="true"
+                        android:padding="5dp"
+                        android:src="@drawable/ic_expand" />
+
+                    <TextView
+                        android:id="@+id/tvReflectionQuestionLabel"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/btnExpandDiary"
+                        android:layout_marginEnd="4dp"
+                        android:breakStrategy="high_quality"
+                        android:hyphenationFrequency="none"
+                        android:maxLines="3"
+                        android:text="Today's Reflection"
+                        android:textColor="#1C1C1C"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+
+
+                </RelativeLayout>
+
+
+                <EditText
+                    android:id="@+id/etDiaryTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="14dp"
+                    android:background="@drawable/bg_input_soft"
+                    android:hint="Diary title"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapSentences"
+                    android:maxLines="1"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:singleLine="true"
+                    android:textColor="#202020"
+                    android:textColorHint="#A0A0A0"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/etDiaryContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="110dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/bg_input_soft"
+                    android:gravity="top|start"
+                    android:hint="Write about your day..."
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:padding="14dp"
+                    android:textColor="#202020"
+                    android:textColorHint="#A0A0A0"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="How are you feeling?"
+                    android:textColor="#2A2A2A"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/layoutMoodContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_mood_container"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:padding="16dp"
+                    android:layout_marginTop="6dp">
+
+                    <ImageView
+                        android:id="@+id/ivMoodHappy"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:src="@drawable/ic_mood_happy" />
+
+                    <ImageView
+                        android:id="@+id/ivMoodGood"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:src="@drawable/ic_mood_good" />
+
+                    <ImageView
+                        android:id="@+id/ivMoodNeutral"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:src="@drawable/ic_mood_neutral" />
+
+                    <ImageView
+                        android:id="@+id/ivMoodSad"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:src="@drawable/ic_mood_sad" />
+
+                    <ImageView
+                        android:id="@+id/ivMoodMiserable"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginHorizontal="8dp"
+                        android:src="@drawable/ic_mood_miserable" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/btnWriteEntry"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/bg_chip_all"
+                    android:gravity="center"
+                    android:text="Save Entry"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <!-- Recent Entries -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvEntriesTitle"
+                android:layout_width="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Recent Entries"
+                android:textColor="#1F1F1F"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvDiaryEmptySearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:text="No diary entries found"
+            android:textColor="#8E8797"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvRecentEntries"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            tools:listitem="@layout/item_diary_entry" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

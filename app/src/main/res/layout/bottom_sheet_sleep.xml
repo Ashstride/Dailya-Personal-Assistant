@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_bottom_sheet"
+    android:forceDarkAllowed="false">
+
+
+    <View
+        android:layout_width="44dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_sheet_handle"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleep Tracker"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="#111111"/>
+
+    <!-- Sleep Time -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textColor="#555555"
+        android:text="Sleep Time"/>
+
+    <TextView
+        android:id="@+id/tvSleepTime"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input_soft"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:textColor="#111111"
+        android:text="Select time"
+        android:drawableEnd="@drawable/ic_moon"/>
+
+    <!-- Wake Time -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#555555"
+        android:text="Wake Up Time"/>
+
+    <TextView
+        android:id="@+id/tvWakeTime"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input_soft"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="16dp"
+        android:textColor="#111111"
+        android:text="Select time"
+        android:drawableEnd="@drawable/ic_sun"/>
+
+    <!-- Calculated Sleep -->
+    <TextView
+        android:id="@+id/tvSleepDuration"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="18dp"
+        android:background="@drawable/bg_input_soft"
+        android:gravity="center"
+        android:text="Sleep Duration: --"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#555555"/>
+
+    <!-- Sleep Quality -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textColor="#555555"
+        android:text="Sleep Quality"/>
+
+    <Spinner
+        android:id="@+id/spSleepQuality"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_chip_unselected"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:popupBackground="@android:color/white"
+        android:spinnerMode="dropdown"
+        android:dropDownVerticalOffset="8dp"
+        android:forceDarkAllowed="false" />
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSaveSleep"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="24dp"
+
+        android:background="@drawable/bg_save_task_button"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
+
+        android:text="Save Sleep Data"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:textStyle="bold"
+
+        android:elevation="0dp"
+        android:stateListAnimator="@null" />
+
+</LinearLayout>

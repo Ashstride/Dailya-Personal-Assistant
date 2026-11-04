@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- عکس پس‌زمینه لوگو (آزاد شده از ظرف برای جلوگیری از کراپ) -->
+    <ImageView
+        android:id="@+id/imgBack"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="@+id/logoContainer"
+        app:layout_constraintLeft_toLeftOf="@+id/logoContainer"
+        app:layout_constraintRight_toRightOf="@+id/logoContainer"
+        app:layout_constraintTop_toTopOf="@+id/logoContainer" />
+
+    <!-- ظرف لوگو (فقط صورت و کتاب و چشم‌ها) -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/logoContainer"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <ImageView
+            android:id="@+id/imgFace"
+            android:layout_width="102dp"
+            android:layout_height="102dp"
+            android:src="@drawable/face"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.65"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.65" />
+
+        <ImageView
+            android:id="@+id/imgEyesOpen"
+            android:layout_width="57dp"
+            android:layout_height="10dp"
+            android:src="@drawable/eyesopen"
+            app:layout_constraintBottom_toBottomOf="@id/imgFace"
+            app:layout_constraintHeight_percent="0.08"
+            app:layout_constraintLeft_toLeftOf="@id/imgFace"
+            app:layout_constraintRight_toRightOf="@id/imgFace"
+            app:layout_constraintTop_toTopOf="@id/imgFace"
+            app:layout_constraintVertical_bias="0.42"
+            app:layout_constraintWidth_percent="0.35" />
+
+        <ImageView
+            android:id="@+id/imgEyesClosed"
+            android:layout_width="53dp"
+            android:layout_height="12dp"
+            android:alpha="0"
+            android:src="@drawable/eyesclosed"
+            app:layout_constraintBottom_toBottomOf="@id/imgEyesOpen"
+            app:layout_constraintHeight_percent="0.06"
+            app:layout_constraintLeft_toLeftOf="@id/imgEyesOpen"
+            app:layout_constraintRight_toRightOf="@id/imgEyesOpen"
+            app:layout_constraintTop_toTopOf="@id/imgEyesOpen"
+            app:layout_constraintWidth_percent="0.38" />
+
+        <ImageView
+            android:id="@+id/imgBook"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="21dp"
+            android:src="@drawable/book"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHeight_percent="0.25"
+            app:layout_constraintRight_toRightOf="@id/imgFace"
+            app:layout_constraintWidth_percent="0.25" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/txtAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Dailya"
+        android:textColor="#3E1284"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoContainer" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

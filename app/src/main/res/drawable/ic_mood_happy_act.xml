@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="128"
+    android:viewportHeight="128">
+
+    <!-- Face background -->
+    <path
+        android:fillColor="#FFDC92"
+        android:strokeColor="#D97A44"
+        android:strokeWidth="6"
+        android:pathData="
+            M64,8
+            C94.93,8 120,33.07 120,64
+            C120,94.93 94.93,120 64,120
+            C33.07,120 8,94.93 8,64
+            C8,33.07 33.07,8 64,8
+            Z" />
+
+    <!-- Left eye -->
+    <path
+        android:fillColor="#D97A44"
+        android:pathData="
+            M45,47
+            C49.42,47 53,50.58 53,55
+            C53,59.42 49.42,63 45,63
+            C40.58,63 37,59.42 37,55
+            C37,50.58 40.58,47 45,47
+            Z" />
+
+    <!-- Right eye -->
+    <path
+        android:fillColor="#D97A44"
+        android:pathData="
+            M83,47
+            C87.42,47 91,50.58 91,55
+            C91,59.42 87.42,63 83,63
+            C78.58,63 75,59.42 75,55
+            C75,50.58 78.58,47 83,47
+            Z" />
+
+    <!-- Mouth -->
+    <path
+        android:fillColor="#D97A44"
+        android:pathData="
+            M43,70
+            C41.34,70 40,71.34 40,73
+            C40,88.5 50.8,100 64,100
+            C77.2,100 88,88.5 88,73
+            C88,71.34 86.66,70 85,70
+            Z" />
+
+    <!-- Inner white smile -->
+    <path
+        android:fillColor="#FFF4E4"
+        android:pathData="
+            M50,84
+            C53,79.5 58,77.5 64,77.5
+            C70,77.5 75,79.5 78,84
+            C75.5,91 70.2,95 64,95
+            C57.8,95 52.5,91 50,84
+            Z" />
+
+</vector>
